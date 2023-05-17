@@ -1,0 +1,6 @@
+version: '3'
+services:
+  your-api:
+    image:  pmc-api
+    ports:
+      - 8080:8080
