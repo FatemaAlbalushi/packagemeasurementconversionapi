@@ -7,15 +7,25 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-
+/**
+ * The MeasurementServiceTest class is responsible for testing the functionalities of the MeasurementService class.
+ * It contains test cases to verify the conversion and processing of measurements.
+ */
 class MeasurementServiceTest {
     private MeasurementService measurementService;
 
+    /**
+     * Initializes the MeasurementService object before each test case.
+     */
     @BeforeEach
     public void setUp() {
         measurementService = new MeasurementService();
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "aa".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test1() {
         // Arrange
@@ -30,6 +40,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "abbcc".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test2() {
         // Arrange
@@ -44,6 +58,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "dz_a_aazzaaa".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test3() {
         // Arrange
@@ -58,6 +76,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "a_".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test5() {
         // Arrange
@@ -72,6 +94,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "abcdabcdab".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test6() {
         // Arrange
@@ -86,7 +112,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
-
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "zdaaaaaaaabaaaaaaaabaaaaaaaabbaa".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test8() {
         // Arrange
@@ -101,6 +130,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "zza_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_a_".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test9() {
         // Arrange
@@ -115,6 +148,10 @@ class MeasurementServiceTest {
         assertEquals(expected, output);
     }
 
+    /**
+     * Test case to verify the conversion and processing of measurements for the input "za_a_a_a_a_a_a_a_a_a_a_a_a_azaaa".
+     * It asserts that the expected output matches the actual output.
+     */
     @Test
     public void testConvertMeasurements_test10() {
         // Arrange

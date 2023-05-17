@@ -7,12 +7,22 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The MeasurementService class provides the functionality to convert and process measurements.
+ * It contains methods for converting a measurement input string into a list of integers and processing the converted measurements.
+ */
 @Service
 public class MeasurementService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MeasurementService.class);
 
-
+    /**
+     * Converts a measurement input string into a list of integers.
+     * @param input The measurement input string to be converted.
+     * @return The list of integers representing the converted measurements.
+     * @throws IllegalArgumentException If the input is invalid or not supported.
+     * @throws RuntimeException If an error occurs during measurement conversion.
+     */
     public static List<Integer> convertMeasurements(String input) {
         try {
             // Validate input using the MeasurementValidator class
@@ -88,7 +98,12 @@ public class MeasurementService {
         }
     }
 
-
+    /**
+     * Processes the converted measurements and returns the result.
+     * @param measurements The list of integers representing the converted measurements.
+     * @return The processed measurements as a list of integers.
+     * @throws RuntimeException If an error occurs during measurement processing.
+     */
     public List<Integer> processMeasurements(List<Integer> measurements) {
         try {
             // Initialize variables

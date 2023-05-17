@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
+/**
+ * The MeasurementController class handles requests related to measurement conversions.
+ * It is responsible for validating the input, converting measurements, and returning the converted result.
+ */
 @RestController
 public class MeasurementController {
 
@@ -24,13 +27,25 @@ public class MeasurementController {
     private final MeasurementValidator measurementValidator;
     private static final Logger LOGGER = LoggerFactory.getLogger(MeasurementController.class);
 
-
+    /**
+     * Constructs a new instance of MeasurementController.
+     *
+     * @param measurementService   The measurement service to handle measurement conversions.
+     * @param measurementValidator The validator to validate the measurement input.
+     */
     @Autowired
     public MeasurementController(MeasurementService measurementService, MeasurementValidator measurementValidator) {
         this.measurementService = measurementService;
         this.measurementValidator = measurementValidator;
     }
 
+    /**
+     * Handles the GET request for measurement conversion.
+     *
+     * @param request The MeasurementRequest object containing the measurement input.
+     * @return The MeasurementResponse object containing the converted measurements.
+     * @throws IllegalArgumentException If the input is invalid or not supported.
+     */
     @GetMapping("/convert-measurements")
     public List<Integer> convertMeasurements(@ModelAttribute MeasurementRequest request) {
         String input = request.getInput();
@@ -47,7 +62,12 @@ public class MeasurementController {
         }
     }
 
-
+    /**
+     * Handles the exception thrown when an invalid input is received.
+     *
+     * @param ex The IllegalArgumentException thrown.
+     * @return The ResponseEntity with a BAD_REQUEST status and the error message.
+     */
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
