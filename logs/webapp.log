@@ -18,3 +18,24 @@
 2023-05-17 15:20:55.320 ERROR P.c.p.Service.MeasurementValidator - Invalid input format. Only alphabetic characters and underscore are allowed.
 2023-05-17 15:20:55.320 ERROR P.c.p.C.MeasurementController - Invalid input: Invalid input format. Only alphabetic characters and underscore are allowed.
 2023-05-17 15:20:55.328 ERROR P.c.p.C.MeasurementController - Invalid input: Invalid input format. Only alphabetic characters and underscore are allowed.
+2023-05-17 15:28:13.839 INFO  P.c.p.PackagemeasurementconversionapiApplication - Starting PackagemeasurementconversionapiApplication using Java 17.0.2 with PID 14548 (C:\Users\LAP-10\Documents\packagemeasurementconversionapi\target\classes started by LAP-10 in C:\Users\LAP-10\Documents\packagemeasurementconversionapi)
+2023-05-17 15:28:13.843 INFO  P.c.p.PackagemeasurementconversionapiApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-17 15:28:15.044 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-05-17 15:28:15.056 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-17 15:28:15.057 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-17 15:28:15.057 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-17 15:28:15.164 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-17 15:28:15.164 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1262 ms
+2023-05-17 15:28:15.586 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-05-17 15:28:15.618 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-17 15:28:15.631 INFO  P.c.p.PackagemeasurementconversionapiApplication - Started PackagemeasurementconversionapiApplication in 2.185 seconds (process running for 2.835)
+2023-05-17 15:28:45.621 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [PackageMeasurementConversionapi.com.packagemeasurementconversionapi.PackagemeasurementconversionapiApplicationTests]: PackagemeasurementconversionapiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-17 15:28:45.715 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration PackageMeasurementConversionapi.com.packagemeasurementconversionapi.PackagemeasurementconversionapiApplication for test class PackageMeasurementConversionapi.com.packagemeasurementconversionapi.PackagemeasurementconversionapiApplicationTests
+2023-05-17 15:28:46.096 INFO  P.c.p.PackagemeasurementconversionapiApplicationTests - Starting PackagemeasurementconversionapiApplicationTests using Java 17.0.2 with PID 9104 (started by LAP-10 in C:\Users\LAP-10\Documents\packagemeasurementconversionapi)
+2023-05-17 15:28:46.097 INFO  P.c.p.PackagemeasurementconversionapiApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-05-17 15:28:47.348 INFO  P.c.p.PackagemeasurementconversionapiApplicationTests - Started PackagemeasurementconversionapiApplicationTests in 1.474 seconds (process running for 2.752)
+2023-05-17 15:30:31.246 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-17 15:30:31.247 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-17 15:30:31.251 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-17 15:30:31.340 INFO  P.c.p.C.MeasurementController - Received measurement conversion request: abbcc
+2023-05-17 15:30:31.345 INFO  P.c.p.C.MeasurementController - Converted measurements: [2, 6]
