@@ -16,12 +16,12 @@ public class MeasurementValidator {
     public static void validateInput(String input) {
         if (input == null || input.isEmpty()) {
             String errorMessage = "Input cannot be empty.";
-
+            LOGGER.error(errorMessage);
             throw new IllegalArgumentException(errorMessage);
         }
         if (!input.matches("[a-zA-Z_]+")) {
             String errorMessage = "Invalid input format. Only alphabetic characters and underscore are allowed.";
-
+            LOGGER.error(errorMessage);
             throw new IllegalArgumentException(errorMessage);
         }
     }

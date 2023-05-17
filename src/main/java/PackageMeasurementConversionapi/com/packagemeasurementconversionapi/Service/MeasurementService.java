@@ -78,10 +78,12 @@ public class MeasurementService {
             }
             return result;
         } catch (IllegalArgumentException e) {
-
+            // Log and re-throw IllegalArgumentException
+            LOGGER.error("Invalid input: {}", e.getMessage());
             throw e;
         } catch (Exception e) {
-
+            // Log and re-throw RuntimeException
+            LOGGER.error("Error occurred during measurement conversion: {}", e.getMessage());
             throw new RuntimeException("Error occurred during measurement conversion.", e);
         }
     }
@@ -115,8 +117,8 @@ public class MeasurementService {
 
             return result;
         } catch (Exception e) {
-
-
+            // Log and re-throw RuntimeException
+            LOGGER.error("Error occurred during measurement processing: {}", e.getMessage());
             throw new RuntimeException("Error occurred during measurement processing.", e);
         }
     }

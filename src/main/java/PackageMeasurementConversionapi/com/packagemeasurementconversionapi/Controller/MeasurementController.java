@@ -34,15 +34,15 @@ public class MeasurementController {
     @GetMapping("/convert-measurements")
     public List<Integer> convertMeasurements(@ModelAttribute MeasurementRequest request) {
         String input = request.getInput();
-
+        LOGGER.info("Received measurement conversion request: {}", input);
         try {
             measurementValidator.validateInput(input); // Validate the input
             List<Integer> result = measurementService.convertMeasurements(input);
             List<Integer> output = measurementService.processMeasurements(result);
-
+            LOGGER.info("Converted measurements: {}", output);
             return output;
         } catch (IllegalArgumentException ex) {
-
+            LOGGER.error("Invalid input: {}", ex.getMessage());
             throw ex;
         }
     }
@@ -51,7 +51,7 @@ public class MeasurementController {
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
-
+        LOGGER.error("Invalid input: {}", ex.getMessage());
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 }
